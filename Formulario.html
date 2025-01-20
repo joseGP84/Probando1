@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>JGP Formularios</title>
+    <!--creamos estilos y clases para modificar tamblas fondos letras etc..-->
+    <!--no sabia muy bien en la foto si querias que todo el fondo estubiera de un color o solo la parte del formulario asi que te la pongo de las dos maneras.-->
+    <style>
+        
+        body{
+            background-color: rgb(99, 236, 207);
+        }
+table, td{
+    border:5px groove rgb(160, 160, 161);
+    border-collapse: collapse;
+    background-color: rgb(250, 166, 135);
+    font-weight: bold;
+}
+.centrado{
+text-align: center;
+}
+
+.fondo {
+    text-align: left;
+    font-size: 1.5em;
+background-color: rgb(250, 166, 135);
+}
+
+    </style>
+    </head>
+    <body>
+
+        <h1>FORMULARIO</h1>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+            
+            <table>
+                <caption class="fondo">Formulario de alta de Usuario:</caption>
+                <tr><!--Primera fila-->
+                    <!-- no entendido bien lo de solo lectura si le añado el atributo no me deja escribir-->
+                    <td class="centrado" colspan="2">Identificador de usuario: <label for="prueba1"></label>
+                    <input type="text" name="pepe" id="prueba1" title="tu numero de usuario"  value="usu_012345" ></td>
+                </tr>
+
+                <tr><!--Segunda fila-->
+                    <td>Nombre:
+                    <label for="p1"></label>
+                        <input type="text" name="pepe1" id="p1" title="pon tu nombre"></td>
+                        <td>Apellidos:
+                        <label for="p2"></label>
+                            <input type="text" name="pepe2" id="p2" title="pon tus apellidos"></td>
+                </tr>
+
+                <tr><!--tercera fila contraseña-->
+                    <td>Contraseña: <label for="pas1"></label>
+                    <input type="password" name="pepepas" id="pas1" title="escriba la nueva contraseña"></td>
+                    <td>Confirma Contraseña: <label for="pas2"></label>
+                    <input type="password" name="pepepas2" id="pas2" title="escriba la contraseña para verificar"> </td>
+                </tr>
+
+                <tr><!--cuarta fila email-->
+                    <td colspan="2">Email: <label for="email"></label>
+                        <!--en este input type le iva a poner el de email para verificar que fuera un email pero en el trabajo especifica que lo pongamos como texto.-->
+                    <input type="text" name="pepeemail" id="email" title="escribe tu email@"> </td>
+                </tr>
+
+                <tr><!--quinta fila macho o hembra-->
+                    <td>Sexo :</td>
+                    <td><input type="radio" name="sexo" title="Marca si te consideras hombre" >Masculino
+                        <input type="radio" name="sexo" title="Marca si te consideras mujer" checked>Femenino </td>
+                </tr>
+                <tr><!--sexta fila sleccionar aficiones--> 
+                    <td>Aficiones :</td>
+                    <td>
+                        <input type="checkbox" name="cine" value="ok" title="selecciona si te gusta el cine">Cine<br>
+                        <input type="checkbox" name="Deportes" value="ok" title="selecciona si te gusta los deportes">Deportes<br>
+                        <input type="checkbox" name="Lectura" value="ok" title="selecciona si te gusta la lectura" checked>Lectura
+                    </td>
+                </tr>
+                <tr><!--Septima fila desplegable-->
+                    <td>Pais :</td>
+                    <td><select title="despliega para ver paises disponibles">
+                        <option value="ES" selected>España</option>
+                        <option value="PO">Portugal</option>
+                        <option value="Francia">Francia</option>
+                    </select></td>
+                </tr>
+                <tr><!--octava fila seleccionar foto-->
+                    <td>Suba su foto : </td>
+                    <td>
+                        <input type="file" title="presiona aqui para seleccionar una foto">
+                    </td>
+                </tr>
+                <tr><!--novena fila area de texto-->
+                    <td>Comentarios Personales :</td>
+                    <td>
+                        <textarea placeholder="Escriba aqui sus comentarios" cols="40" rows="5" title="Escribe aqui aspectos de tu vida."></textarea>
+                    </td>
+                </tr>
+                <tr><!--Decima fila botones-->
+                    <td class="centrado"><input type="reset" name="breset" value="Resetea el formulario" title="presiona aqui para volver a empezar de cero"></td>
+                    <td class="centrado"><input type="submit" name="bsubmit" value="Enviar" title="presiona aqui para enviar formulario, revisa todo antes gracias."  ></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
